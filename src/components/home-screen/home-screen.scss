@@ -1,0 +1,133 @@
+.home {
+  height: 100vh;
+  padding: 0 25px 25px;
+
+  @media (min-width: $big-tablet-width) {
+    padding: 30px;
+
+    &::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 200%;
+      transform: rotate(-15deg);
+      left: -83%;
+      top: -50%;
+      background-color: $color-green;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+    z-index: 0;
+
+    @media (min-width: $big-tablet-width) {
+      grid-template-columns: 33.3333% minmax(56px, auto) minmax(400px, 550px) minmax(80px, auto) 50px;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__image {
+    display: none;
+
+    @media (min-width: $mobile-width) {
+      display: block;
+      width: 230px;
+      height: 230px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      border: 4px solid #252525;
+    }
+
+    @media (min-width: $big-tablet-width) {
+      grid-column: 1 / 2;
+      width: 100%;
+      height: calc(100vh - 60px);
+      margin-bottom: 0;
+      border: none;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 0 7px rgba(0, 0, 0, .9);
+    }
+  }
+
+  .greeting {
+
+    @media (min-width: $mobile-width) {
+      display: grid;
+      place-items: center;
+    }
+
+    @media (min-width: $big-tablet-width) {
+      grid-column: 3 / 4;
+      place-items: baseline;
+      max-width: 450px;
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: 550px;
+    }
+
+    &__subtitle {
+      margin-bottom: 18px;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 19px;
+      color: #eeeeee;
+      text-transform: uppercase;
+      text-align: left;
+
+      @media (min-width: $mobile-width) {
+        display: none;
+      }
+
+      @media (min-width: $big-tablet-width) {
+        display: block;
+        font-size: 22px;
+
+      }
+    }
+
+    &__title {
+      margin-bottom: 23px;
+      font-size: 29px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-align: left;
+
+      &--color {
+        font-weight: 800;
+        color: $color-green;
+      }
+
+      @media (min-width: $mobile-width) {
+        text-align: center;
+      }
+
+      @media (min-width: $big-tablet-width) {
+        font-size: 40px;
+        text-align: left;
+      }
+    }
+
+    &__description {
+      margin-bottom: 23px;
+
+      @media (min-width: $mobile-width) {
+        max-width: 550px;
+        text-align: center;
+      }
+
+      @media (min-width: $big-tablet-width) {
+        max-width: none;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: left;
+      }
+    }
+  }
+}

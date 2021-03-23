@@ -1,0 +1,121 @@
+.experience {
+  padding: 0 25px;
+
+  @media (min-width: $mobile-width) {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    max-width: calc(100% - 225px);
+  }
+
+  &__title {
+    margin-bottom: 48px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media (min-width: $mobile-width) {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    @media (min-width: $big-tablet-width) {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-auto-flow: column;
+      grid-column-gap: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+    padding: 0 20px 0 60px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 1px;
+      height: 100%;
+      background-color: #333333;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    margin-bottom: 19px;
+    padding: 1px 10px;
+    border-radius: 20px;
+    background-color: #252525;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: .8;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &--details {
+      position: relative;
+      padding-left: 26px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      opacity: .8;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 2px;
+        background-color: #ffffff;
+        left: 7px;
+        top: 9px;
+        opacity: .8;
+      }
+    }
+
+    @media (min-width: $mobile-width) {
+      font-size: 18px;
+    }
+  }
+
+  &__description {
+    color: #eeeeee;
+    line-height: 1.6;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    background-color: $color-green;
+    z-index: 1;
+  }
+}

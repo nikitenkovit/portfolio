@@ -1,0 +1,67 @@
+.resume {
+  position: relative;
+  padding: 85px 25px 70px 25px;
+  margin-bottom: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 1px;
+    background-color: #252525;
+  }
+
+  @media (min-width: $mobile-width) {
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto 55px auto;
+    padding: 0 0 70px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: calc(100% - 225px);
+  }
+}
+
+.personal_infos {
+  margin-bottom: 48px;
+
+  @media (min-width: $big-tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media (min-width: $mobile-width) {
+      font-size: 26px;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    border: 4px solid #252525;
+
+    @media (min-width: $mobile-width) {
+      display: none;
+    }
+  }
+}
+

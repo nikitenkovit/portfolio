@@ -1,0 +1,51 @@
+.about-list {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 25px;
+  margin-bottom: 16px;
+
+  &__group {
+    @media (min-width: $mobile-width) {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $big-tablet-width) {
+      display: grid;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+
+  &__term {
+    opacity: .8;
+    line-height: 1.6;
+    text-transform: capitalize;
+
+    @media (min-width: $mobile-width) {
+      font-size: 15px;
+    }
+  }
+
+  &__definition {
+    font-weight: 600;
+    line-height: 1.6;
+
+    @media (min-width: $mobile-width) {
+      margin-left: 3px;
+      font-size: 15px;
+    }
+
+    @media (min-width: $big-tablet-width) {
+      margin-left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 3px;
+    }
+  }
+}

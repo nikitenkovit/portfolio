@@ -1,0 +1,77 @@
+.skills {
+  position: relative;
+  margin-bottom: 55px;
+  padding: 0 25px 70px 25px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto 55px auto;
+    padding: 0 0 70px 0;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    max-width: calc(100% - 225px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: 1px;
+    background-color: #252525;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media (min-width: $mobile-width) {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-row-gap: 56px;
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    place-items: center;
+    height: 155px;
+
+    @media (min-width: $mobile-width) {
+      gap: 25px;
+    }
+  }
+
+  &__icon {
+    font-size: 96px;
+    color: $color-green;
+
+    @media (min-width: $mobile-width) {
+      font-size: 120px;
+    }
+  }
+
+  &__description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+}

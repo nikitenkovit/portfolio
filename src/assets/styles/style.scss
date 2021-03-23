@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('OpenSans-Regular'),
+  url('../fonts/Open_Sans/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/Open_Sans/OpenSans-Regular.woff') format('woff'),
+  url('../fonts/Open_Sans/OpenSans-Regular.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('OpenSans-SemiBold'),
+  url('../fonts/Open_Sans/OpenSans-SemiBold.woff2') format('woff2'),
+  url('../fonts/Open_Sans/OpenSans-SemiBold.woff') format('woff'),
+  url('../fonts/Open_Sans/OpenSans-SemiBold.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Poppins-SemiBold'),
+  url('../fonts/Poppins/Poppins-SemiBold.woff2') format('woff2'),
+  url('../fonts/Poppins/Poppins-SemiBold.woff') format('woff'),
+  url('../fonts/Poppins/Poppins-SemiBold.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Poppins-Bold'),
+  url('../fonts/Poppins/Poppins-Bold.woff2') format('woff2'),
+  url('../fonts/Poppins/Poppins-Bold.woff') format('woff'),
+  url('../fonts/Poppins/Poppins-Bold.ttf') format('ttf')
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Poppins-ExtraBold'),
+  url('../fonts/Poppins/Poppins-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Poppins/Poppins-ExtraBold.woff') format('woff'),
+  url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('ttf')
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  min-width: initial;
+  height: 1px;
+  min-height: initial;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  background-color: #111111;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+ul, dl {
+  list-style: none;
+}
+
+a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+$color-green: #72b626;
+$mobile-width: "576px";
+$tablet-width: "768px";
+$big-tablet-width: "992px";
+$desktop-width: "1200px";
+
+.main-title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  align-items: center;
+  height: 62px;
+  padding: 0 25px;
+  background-color: #252525;
+  border-bottom: 1px solid #333333;
+  transition: .3s;
+  z-index: 2;
+  pointer-events: none;
+
+  &__title {
+    font-size: 26px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    &--span {
+      color: $color-green;
+    }
+  }
+
+  &__bg {
+    display: none;
+  }
+
+  @media (min-width: $mobile-width) {
+    position: relative;
+    justify-content: center;
+    height: 227px;
+    padding: 0;
+    background-color: transparent;
+    border-bottom: none;
+
+    &__title {
+      font-size: 56px;
+    }
+
+    &__bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 110px;
+      font-weight: 800;
+      letter-spacing: 10px;
+      color: rgba(255, 255, 255, .07);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 176px;
+  line-height: 46px;
+  border-radius: 26px;
+  background-color: $color-green;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: .3s;
+    user-select: none;
+  }
+
+  &:hover::before {
+    right: 25px;
+    opacity: 1;
+  }
+
+  &__span {
+    position: relative;
+    left: 0;
+    transition: .3s;
+  }
+
+  &:hover .button__span {
+    left: -10px;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    width: 208px;
+    font-size: 15px;
+  }
+}
+
+@import '../../components/home-screen/home-screen';
+@import '../../components/header/header';
+@import '../../components/aside-navigation/aside-navigation';
+@import '../../components/about-screen/about-screen';
+@import '../../components/about-list/about -list';
+@import '../../components/results/results';
+@import '../../components/skills/skils';
+@import '../../components/experience/experience';

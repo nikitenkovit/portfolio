@@ -1,0 +1,123 @@
+.header {
+  position: relative;
+  z-index: 3;
+  height: 0;
+
+  @media (min-width: $big-tablet-width) {
+    display: none;
+  }
+
+  .header__toggle-button {
+    position: fixed;
+    top: 4px;
+    right: 10px;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    background-color: #252525;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .3s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      left: 15.5px;
+      width: 23px;
+      height: 2px;
+      background: #ffffff;
+      transition: transform .3s ease-in;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 19px;
+      box-shadow: 0 -7px #ffffff;
+    }
+
+    &--active {
+      &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        box-shadow: none;
+      }
+    }
+
+    @media (min-width: $mobile-width) {
+      top: 30px;
+      right: 30px;
+    }
+  }
+
+  .header-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 100vw;
+    height: 100vh;
+    padding: 60px 25px;
+    background-color: #252525;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    transition: transform .5s cubic-bezier(.77, .2, .05, 1);
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 40px;
+      border-bottom: 1px solid #333333;
+
+      @media (min-width: $mobile-width) {
+        padding-left: 55px;
+      }
+    }
+
+    &__item:last-child {
+      border-bottom: none;
+    }
+
+    &__link {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 56px;
+
+      &--active {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        color: $color-green;
+      }
+
+      @media (min-width: $mobile-width) {
+        font-size: 26px;
+        line-height: 69px;
+      }
+    }
+
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &--home {
+    .header__toggle-button {
+      top: 25px;
+      right: 25px;
+    }
+  }
+}
