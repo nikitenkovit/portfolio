@@ -7,7 +7,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import browserHistory from "./history";
 import reducer from './store/root-reducer';
 import App from "./components/app/app";
-import {setOnClickBlur} from "./utils/set-on-click-blur";
+import {setOnClickBlur} from "./assets/js/set-on-click-blur";
 
 import './assets/styles/normalize.css';
 import './assets/styles/custom-icon-font.css';

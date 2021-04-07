@@ -1,0 +1,14 @@
+.gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #252525;
+  z-index: 10;
+
+  @media (min-width: $big-tablet-width) {
+    display: grid;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .85);
+  }
+}

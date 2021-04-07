@@ -1,9 +1,8 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('../fonts/icon-font/icons.ttf?kkpz0q') format('truetype'),
-    url('../fonts/icon-font/icons.woff?kkpz0q') format('woff'),
-    url('../fonts/icon-font/icons.svg?kkpz0q#icons') format('svg');
+    url('../../assets/fonts/icon-font/icons.woff?8ul5ti') format('woff'),
+    url('../../assets/fonts/icon-font/icons.ttf?8ul5ti') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -24,7 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-minutemailer:before {
+.icon-typescript:before {
   content: "\e906";
 }
 .icon-javascript:before {
@@ -38,6 +37,15 @@
 }
 .icon-webpack:before {
   content: "\e908";
+}
+.icon-check-square:before {
+  content: "\e912";
+}
+.icon-paper-plane:before {
+  content: "\e911";
+}
+.icon-external-link-alt:before {
+  content: "\e910";
 }
 .icon-briefcase:before {
   content: "\e909";
@@ -71,6 +79,15 @@
 }
 .icon-cog:before {
   content: "\e904";
+}
+.icon-file-text2:before {
+  content: "\e926";
+}
+.icon-code:before {
+  content: "\ea80";
+}
+.icon-facebook:before {
+  content: "\ea90";
 }
 .icon-html-five:before {
   content: "\eae4";

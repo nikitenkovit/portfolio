@@ -58,7 +58,7 @@ const Experience = () => {
           <h3 className="experience__subtitle">Specialty psychologist <span className="experience__subtitle--details">
           Rostov State University</span></h3>
           <p className="experience__description">
-            Sale of computer equipment
+            Studied psychology specialty
           </p>
           <i className="experience__icon icon-graduation-cap"/>
         </li>

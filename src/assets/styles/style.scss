@@ -91,7 +91,7 @@ ul, dl {
   list-style: none;
 }
 
-a {
+a, button {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   text-decoration: none;
@@ -170,6 +170,8 @@ $desktop-width: "1200px";
   line-height: 46px;
   border-radius: 26px;
   background-color: $color-green;
+  border: none;
+  cursor: pointer;
 
   &::before {
     position: absolute;
@@ -210,3 +212,9 @@ $desktop-width: "1200px";
 @import '../../components/results/results';
 @import '../../components/skills/skils';
 @import '../../components/experience/experience';
+@import '../../components/projects-list/projects-list';
+@import '../../components/gallery/gallery';
+@import '../../components/gallery/slider';
+@import '../../components/gallery-project-item/gallery-project-item';
+@import '../../components/contacts-screen/contacts-screen';
+@import '../../components/form/form';

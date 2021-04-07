@@ -109,8 +109,12 @@
       }
 
       @media (min-width: $big-tablet-width) {
-        font-size: 40px;
+        font-size: 38px;
         text-align: left;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 40px;
       }
     }
 

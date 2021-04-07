@@ -1,0 +1,88 @@
+.project {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 95px 25px 25px 25px;
+  background-color: #252525;
+
+  @media (min-width: $mobile-width) {
+    padding: 135px 30px 30px 30px;
+  }
+
+  @media (min-width: $big-tablet-width) {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  &__wrapper {
+
+    @media (min-width: $big-tablet-width) {
+      width: 600px;
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #252525;
+    }
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-green;
+
+    @media (min-width: $mobile-width) {
+      font-size: 33px;
+    }
+  }
+
+  &__information-list {
+    padding-bottom: 15px;
+    font-size: 14px;
+
+    @media (min-width: $mobile-width) {
+      font-size: 15px;
+    }
+  }
+
+  &__information-item {
+    margin-bottom: 8px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    &--span {
+      font-weight: 600;
+    }
+
+    &--link {
+      text-transform: none;
+      text-decoration: underline;
+      color: $color-green;
+    }
+  }
+
+  &__information-icon {
+    padding-right: 8px;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 23px;
+  }
+
+  &__description {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-indent: 20px;
+
+    @media (min-width: $mobile-width) {
+      font-size: 15px;
+    }
+  }
+}

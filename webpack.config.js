@@ -1,5 +1,4 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -16,7 +15,6 @@ module.exports = {
   output: {
         filename: 'bundle.js',
         path: Paths.DIST,
-        assetModuleFilename: "images/[hash][ext][query]"
   },
     devServer: {
         contentBase: Paths.DIST,
@@ -47,9 +45,19 @@ module.exports = {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {publicPath: ""}
                     },
-                    "css-loader",
+                  {
+                    loader: "css-loader",
+                    options: {
+                      url: (url) => {
+                        if (url.includes('.jpg') || url.includes('.jpg') || url.includes('.svg')) {
+                          return false;
+                        }
+
+                        return true;
+                      },
+                    },
+                  },
                     "postcss-loader",
                     "sass-loader",
                 ]
@@ -79,11 +87,6 @@ module.exports = {
     ],
     resolve: {
         extensions: [".js", ".jsx"]
-    },
-    optimization: {
-      minimizer: [new TerserPlugin({
-        extractComments: false,
-      })],
     },
 
     devtool: "source-map"

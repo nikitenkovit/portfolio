@@ -16,7 +16,7 @@ const Skills = () => {
         </li>
         <li className="skills__item">
           <i className="skills__icon icon-javascript"/>
-          <p className="skills__description">JS</p>
+          <p className="skills__description">JavaScript</p>
         </li>
         <li className="skills__item">
           <i className="skills__icon icon-react"/>

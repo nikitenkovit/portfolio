@@ -19,7 +19,7 @@ const Results = () => {
           <dd className="results__definition">Happy <br/>customers</dd>
         </div>
         <div className="results__group">
-          <dt className="results__term">1255</dt>
+          <dt className="results__term">999</dt>
           <dd className="results__definition">Coffee <br/>cups</dd>
         </div>
       </dl>
