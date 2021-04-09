@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from "../header/header";
 import AsideNavigation from "../aside-navigation/aside-navigation";
 import {Link} from "react-router-dom";
 import {AppRoute, PageWidth, Screen} from "../../const";
+import {startPreloader} from "../../assets/js/start-preloader";
 
 const HomeScreen = () => {
+
+  useEffect(() => {
+    startPreloader();
+  }, []);
+
   return (
     <>
       <Header screen={Screen.HOME}/>
+
+      <AsideNavigation screen={Screen.HOME}/>
 
       <main className="home">
 
@@ -34,7 +42,6 @@ const HomeScreen = () => {
             </Link>
           </section>
         </div>
-        <AsideNavigation screen={Screen.HOME}/>
       </main>
     </>
   );

@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Screen} from "../../const";
 import Header from "../header/header";
 import AsideNavigation from "../aside-navigation/aside-navigation";
 import Form from "../form/form";
+import {startPreloader} from "../../assets/js/start-preloader";
 
 const ContactsScreen = () => {
+  useEffect(() => {
+    startPreloader();
+  }, []);
 
   return (
     <>
       <Header screen={Screen.CONTACTS}/>
+
+      <AsideNavigation screen={Screen.CONTACTS}/>
 
       <main className="main-contacts">
         <div className="main-title">
@@ -64,8 +70,6 @@ const ContactsScreen = () => {
 
           <Form/>
         </div>
-
-        <AsideNavigation screen={Screen.CONTACTS}/>
       </main>
     </>
   );

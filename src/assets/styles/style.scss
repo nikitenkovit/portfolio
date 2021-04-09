@@ -204,6 +204,53 @@ $desktop-width: "1200px";
   }
 }
 
+@keyframes preloader_slide-position {
+  0% {
+    bottom: 100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes preloader_slide-scale {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #252525;
+  z-index: 10000;
+  transform-origin: bottom;
+  transition: .5s ease-in-out;
+
+  &--off {
+    bottom: 0;
+    animation: preloader_slide-position 0.4s ease-in-out both,
+    preloader_slide-scale 0.4s 0.4s ease-in-out reverse both;
+  }
+}
+
+main {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: .6s;
+  transition-delay: .4s;
+}
+
+.main--on {
+  transform: none;
+  opacity: 1;
+}
+
 @import '../../components/home-screen/home-screen';
 @import '../../components/header/header';
 @import '../../components/aside-navigation/aside-navigation';

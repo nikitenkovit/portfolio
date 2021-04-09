@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Header from "../header/header";
 import AboutList from "../about-list/about-list";
 import AsideNavigation from "../aside-navigation/aside-navigation";
@@ -6,11 +6,18 @@ import Results from "../results/results";
 import Skills from "../skills/skills";
 import Experience from "../experience/experience";
 import {Screen} from "../../const";
+import {startPreloader} from "../../assets/js/start-preloader";
 
 const AboutScreen = () => {
+  useEffect(() => {
+    startPreloader();
+  }, []);
+
   return (
     <>
       <Header screen={Screen.ABOUT}/>
+
+      <AsideNavigation screen={Screen.ABOUT}/>
 
       <main className="about">
         <div className="main-title">
@@ -43,8 +50,6 @@ const AboutScreen = () => {
         <Skills/>
 
         <Experience/>
-
-        <AsideNavigation screen={Screen.ABOUT}/>
       </main>
     </>
   );

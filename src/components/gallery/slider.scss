@@ -21,7 +21,9 @@
       padding: 0 30px;
     }
 
-    @media (min-width: $big-tablet-width) {
+    //@media (min-width: $big-tablet-width) {
+    //@media (min-width: $tablet-width) {
+    @media (min-width: 700px) {
       position: absolute;
       height: 0;
       padding: 0;
@@ -100,7 +102,9 @@
       }
     }
 
-    @media (min-width: $big-tablet-width) {
+    //@media (min-width: $big-tablet-width) {
+    //@media (min-width: $tablet-width) {
+    @media (min-width: 700px) {
       position: fixed;
 
       &--prev,
