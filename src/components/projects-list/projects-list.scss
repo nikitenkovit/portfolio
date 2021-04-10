@@ -37,6 +37,7 @@
     overflow: hidden;
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
   }
 
   &__image {
@@ -48,6 +49,8 @@
 
   &__description {
     position: absolute;
+    top: auto;
+    left: auto;
     display: grid;
     place-items: center;
     width: 100%;
@@ -61,4 +64,9 @@
     transition: .3s ease;
     pointer-events: none;
   }
+}
+
+.projects__item:focus .projects__description {
+  top: 0 !important;
+  left: 0 !important;
 }

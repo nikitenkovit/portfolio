@@ -14,21 +14,32 @@ const PortfolioScreen = () => {
   }, []);
 
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [currentItemNumber, setCurrentItemNumber] = useState(``);
+  // const [isGalleryOpen, setIsGalleryOpen] = useState(true);
+
+  const handleGalleryOpen = (itemId) => {
+    setIsGalleryOpen(() => true);
+
+    setCurrentItemNumber(() => itemId);
+  };
 
   return (
     <>
-      {isGalleryOpen ? <Gallery Component={GalleryProjectItem} items={Projects} onGalleryOpen={setIsGalleryOpen}/>
+      {isGalleryOpen ? <Gallery Component={GalleryProjectItem} items={Projects}
+        currentItemNumber={currentItemNumber} onGalleryOpen={setIsGalleryOpen}/>
         : <Header screen={Screen.PORTFOLIO}/>}
 
       <AsideNavigation screen={Screen.PORTFOLIO}/>
 
-      <main className="portfolio">
-        <div className="main-title">
-          <h1 className="main-title__title">My <span className="main-title__title--span">Portfolio</span></h1>
-          <span className="main-title__bg">Works</span>
-        </div>
+      <main className='portfolio'>
+        <div className={`portfolio__wrapper ${isGalleryOpen ? `portfolio--open` : ``}`}>
+          <div className="main-title">
+            <h1 className="main-title__title">My <span className="main-title__title--span">Portfolio</span></h1>
+            <span className="main-title__bg">Works</span>
+          </div>
 
-        <ProjectsList projects={Projects} onGalleryOpen={setIsGalleryOpen}/>
+          <ProjectsList projects={Projects} onGalleryOpen={handleGalleryOpen}/>
+        </div>
       </main>
     </>
   );

@@ -251,6 +251,20 @@ main {
   opacity: 1;
 }
 
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  scrollbar-height: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+    background: transparent;
+  }
+}
+
 @import '../../components/home-screen/home-screen';
 @import '../../components/header/header';
 @import '../../components/aside-navigation/aside-navigation';
@@ -265,3 +279,4 @@ main {
 @import '../../components/gallery-project-item/gallery-project-item';
 @import '../../components/contacts-screen/contacts-screen';
 @import '../../components/form/form';
+@import '../../components/portfolio-screen/portfolio-screen';

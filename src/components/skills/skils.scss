@@ -5,13 +5,8 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
-    max-width: 720px;
     margin: 0 auto 55px auto;
     padding: 0 0 70px 0;
-  }
-
-  @media (min-width: $big-tablet-width) {
-    max-width: calc(100% - 225px);
   }
 
   &::after {

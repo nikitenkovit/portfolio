@@ -3,17 +3,8 @@
 
   @media (min-width: $mobile-width) {
     width: 100%;
-    max-width: 540px;
     margin: 0 auto;
     padding: 0;
-  }
-
-  @media (min-width: $tablet-width) {
-    max-width: 720px;
-  }
-
-  @media (min-width: $big-tablet-width) {
-    max-width: calc(100% - 225px);
   }
 
   &__title {

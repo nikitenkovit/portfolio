@@ -25,31 +25,32 @@ const AboutScreen = () => {
           <span className="main-title__bg">Resume</span>
         </div>
 
-        <section className="resume">
-          <h2 className="visually-hidden">Resume</h2>
+        <div className="about__wrapper">
+          <section className="resume">
+            <h2 className="visually-hidden">Resume</h2>
 
-          <article className="personal_infos">
-            <h3 className="personal_infos__title">Personal infos</h3>
+            <article className="personal_infos">
+              <h3 className="personal_infos__title">Personal infos</h3>
 
-            <picture>
-              <source srcSet="./images/myPhoto-small.webp"
-                type="image/webp"/>
-              <img className="personal_infos__image" src="./images/myPhoto-small.jpg" alt="My photo"/>
-            </picture>
+              <picture>
+                <source srcSet="./images/myPhoto-small.webp" type="image/webp"/>
+                <img className="personal_infos__image" src="./images/myPhoto-small.jpg" alt="My photo"/>
+              </picture>
 
-            <AboutList/>
+              <AboutList/>
 
-            <a download className="personal_infos__download-CV-Button button icon-download" href="#">
-              <span className="button__span">Download CV</span>
-            </a>
-          </article>
+              <a download className="personal_infos__download-CV-Button button icon-download" href="#">
+                <span className="button__span">Download CV</span>
+              </a>
+            </article>
 
-          <Results/>
-        </section>
+            <Results/>
+          </section>
 
-        <Skills/>
+          <Skills/>
 
-        <Experience/>
+          <Experience/>
+        </div>
       </main>
     </>
   );

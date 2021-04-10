@@ -18,3 +18,12 @@ export const Screen = {
 };
 
 export const links = [`home`, `about`, `portfolio`, `contacts`];
+
+export const DIRECTION = {
+  LEFT: 1,
+  RIGHT: -1
+};
+
+export const DEFAULT_TRANSITION_DURATION = 600;
+
+export const DEFAULT_TRANSITION = `transform ${DEFAULT_TRANSITION_DURATION / 1000 + `s`} ease`;

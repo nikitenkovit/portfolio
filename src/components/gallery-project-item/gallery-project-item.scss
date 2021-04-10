@@ -4,12 +4,24 @@
   padding: 95px 25px 25px 25px;
   background-color: #252525;
 
+  overflow-y: scroll;
+
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  scrollbar-width: none;
+  scrollbar-height: none;
+
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none !important;
+    background: transparent;
+  }
+
   @media (min-width: $mobile-width) {
     padding: 135px 30px 30px 30px;
   }
 
-  //@media (min-width: $big-tablet-width) {
-  //@media (min-width: $tablet-width) {
   @media (min-width: 700px) {
     display: grid;
     place-items: center;
@@ -20,8 +32,6 @@
 
   &__wrapper {
 
-    //@media (min-width: $big-tablet-width) {
-    //@media (min-width: $tablet-width) {
     @media (min-width: 700px) {
       width: 600px;
       padding: 30px;
