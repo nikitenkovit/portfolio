@@ -18,7 +18,7 @@ export const Projects = [
     imgUrl: `./images/projects/kanban-board.jpg`,
     name: `Kanban-board`,
     languages: `TypeScript`,
-    previewLink: `nikitenkovit.ru/kanban-board/index.html`,
+    previewLink: `./projects/kanban-board/index.html`,
     githubLink: `https://github.com/nikitenkovit/kanban-board`,
     descriptionEn: `Board for managing plans and tasks. Tasks can be created, dragged, edited, deleted`,
     descriptionRu: `Доска для управления планами и задачами. Задачи можно создавать, перетаскивать, редактировать, удалять`,
@@ -29,7 +29,7 @@ export const Projects = [
     imgUrl: `./images/projects/six-cities.jpg`,
     name: `Six cities`,
     languages: `React, Redux, Jest`,
-    previewLink: `nikitenkovit.ru/six-cities/index.html`,
+    previewLink: `https://www.six-cityes.nikitenkovit.ru/`,
     githubLink: `https://github.com/nikitenkovit/1378865-six-cities-6`,
     descriptionEn: `Pet project. Service for travelers who do not want to overpay for rental housing.
      Choose from six popular travel destinations and get an up-to-date list of rental deals.
@@ -44,7 +44,7 @@ export const Projects = [
     imgUrl: `./images/projects/portfolio.jpg`,
     name: `My portfolio`,
     languages: `React, SASS, JavaScript`,
-    previewLink: `nikitenkovit.ru`,
+    previewLink: `#`,
     githubLink: `https://github.com/nikitenkovit/portfolio`,
     descriptionEn: `I agree, a controversial decision, to add the portfolio site itself to the portfolio.
     But for me this is a full-fledged project, the development of which took a lot of time and which
@@ -65,7 +65,7 @@ export const Projects = [
     imgUrl: `./images/projects/cinemaddict.jpg`,
     name: `Cinemaddict`,
     languages: `JavaScript`,
-    previewLink: `nikitenkovit.ru/cinemaddict/index.html`,
+    previewLink: `./projects/cinemaddict/index.html`,
     githubLink: `https://github.com/nikitenkovit/kinoman`,
     descriptionEn: `Pet project. MVP. Javascript, OOP, Observer pattern, Service Worker`,
     descriptionRu: `Pet-проект. MVP. Javascript, ООП, паттерн Обсервер, Service Worker`,
@@ -91,7 +91,7 @@ export const Projects = [
     imgUrl: `./images/projects/clever-baby.jpg`,
     name: `Clever baby`,
     languages: `HTML, SASS, JavaScript`,
-    previewLink: `nikitenkovit.ru/clever-baby/index.html`,
+    previewLink: `./projects/clever-baby/index.html`,
     githubLink: `https://github.com/nikitenkovit/clever-baby`,
     descriptionEn: `Pet project. Clever-baby English school landing page. Responsive layout 320/768/1200.
      BEM. Grid css grid. Responsive images. Ritinization of images.`,
@@ -104,7 +104,7 @@ export const Projects = [
     imgUrl: `./images/projects/keksogram.jpg`,
     name: `Keksogram`,
     languages: `React, JavaScript`,
-    previewLink: `nikitenkovit.ru/keksogram/index.html`,
+    previewLink: `./projects/keksogram/index.html`,
     githubLink: `https://github.com/nikitenkovit/kekstagram`,
     descriptionEn: `Pet project. Photo viewing service. Originally in vanilla JS, later rewritten in react.
      Experimenting with useReducer and the context API as a Redux replacement. Layout layout made by HTML Academy`,
@@ -117,7 +117,7 @@ export const Projects = [
     imgUrl: `./images/projects/sedona.jpg`,
     name: `Sedona`,
     languages: `HTML, SASS, JavaScript`,
-    previewLink: `nikitenkovit.ru/sedona/index.html`,
+    previewLink: `./projects/sedona/index.html`,
     githubLink: `https://github.com/nikitenkovit/Sedona`,
     descriptionEn: `The first pet project. Tourist site of the city of Sedona, Arizona USA. Layout based on PSD layout.
      Responsive layout 320/768/1200. BEM. logic in JS. four pages: home, photo

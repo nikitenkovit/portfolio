@@ -10,7 +10,8 @@ const Paths = {
 };
 
 module.exports = {
-  target: "web",
+  target: "browserslist",
+  // target: "web",
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -94,5 +95,5 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
 
-  devtool: "source-map"
+  // devtool: "source-map"
 };

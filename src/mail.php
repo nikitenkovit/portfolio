@@ -16,7 +16,7 @@
 	    $text .= '<p><strong>email</strong> ' . $email . '</p>';
 	}
 	if (isset($_POST['subject'])) {
-	    $subject 	= $_POST['email'];
+	    $subject 	= $_POST['subject'];
 	    $text .= '<p><strong>subject</strong> ' . $subject . '</p>';
 	}
 	if (isset($_POST['message'])) {

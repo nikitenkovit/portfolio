@@ -13,7 +13,6 @@ const Form = ({needShowEnglish}) => {
 
     const ajaxSend = async (formData) => {
       const fetchResp = await fetch(`mail.php`, {
-      // const fetchResp = await fetch(`http://httpbin.org/post`, {
         method: `POST`,
         body: formData
       });
