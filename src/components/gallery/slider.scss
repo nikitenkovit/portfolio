@@ -48,6 +48,10 @@
     border: none;
     cursor: pointer;
 
+    &:active {
+      outline: none;
+    }
+
     &--prev::before,
     &--next::before {
       content: "";

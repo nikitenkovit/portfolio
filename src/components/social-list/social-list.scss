@@ -1,0 +1,26 @@
+.social {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  grid-gap: 12px;
+
+  &__link {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #2b2a2a;
+    transition: .3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: $color-green;
+    }
+  }
+
+  &__icon {
+    font-size: 17px;
+    line-height: 70%;
+  }
+}

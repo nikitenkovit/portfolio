@@ -1,23 +1,17 @@
-export const touchStart = (startEvent, sliderList, callbackNext, callbackPrev) => {
+export const touchStart = (startEvent, wrapper, callbackNext, callbackPrev) => {
   let startX = startEvent.changedTouches[0].clientX;
 
-  const touchMove = (moveEvent) => {
-    let shiftX = startX - moveEvent.changedTouches[0].clientX;
+  const touchEnd = (endEvent) => {
+    let shiftX = startX - endEvent.changedTouches[0].clientX;
 
-    if (shiftX > 0) {
+    if (shiftX > 0 && shiftX > 30) {
       callbackNext();
-      sliderList.removeEventListener(`touchmove`, touchMove);
-    } else if (shiftX < 0) {
+    } else if (shiftX < 0 && shiftX < -30) {
       callbackPrev();
-      sliderList.removeEventListener(`touchmove`, touchMove);
     }
+
+    wrapper.removeEventListener(`touchend`, touchEnd);
   };
 
-  const touchEnd = () => {
-    sliderList.removeEventListener(`touchmove`, touchMove);
-    sliderList.removeEventListener(`touchend`, touchEnd);
-  };
-
-  sliderList.addEventListener(`touchmove`, touchMove);
-  sliderList.addEventListener(`touchend`, touchEnd);
+  wrapper.addEventListener(`touchend`, touchEnd);
 };

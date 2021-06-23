@@ -6,6 +6,7 @@ export default class Slider {
     this._slider = root;
     this._currentItemNumber = parseInt(currentItemNumber, 10);
     this._callBack = cb;
+    this._wrapper = this._slider.querySelector(`.slider__wrapper`);
     this._sliderList = this._slider.querySelector(`.slider__list`);
     this._sliderItem = this._slider.querySelector(`.slider__item`);
     this._sliderNextButton = this._slider.querySelector(`.slider__button--next`);
@@ -42,7 +43,7 @@ export default class Slider {
   }
 
   _checkIsNeedCloseGallery() {
-    const needCloseGallery = this._currentChildNumber <= 1 || this._currentChildNumber >= this._numberOfAllChildren;
+    const needCloseGallery = this._currentChildNumber < 0 || this._currentChildNumber > this._numberOfAllChildren - 1;
 
     if (needCloseGallery) {
       this._callBack();
@@ -62,7 +63,7 @@ export default class Slider {
   }
 
   _setInitialPosition() {
-    this._currentTranslate = this._sliderDirection * ((this._currentItemNumber * this._sliderStep) - this._sliderStep);
+    this._currentTranslate = this._sliderDirection * ((this._currentItemNumber * this._sliderStep));
 
     this._setTransform();
 
@@ -80,14 +81,14 @@ export default class Slider {
   }
 
   _moveNext() {
-    this._checkIsNeedCloseGallery();
-
     if (this._isNeedMove) {
       if (this._sliderDirection === DIRECTION.LEFT) {
         this._sliderDirection = DIRECTION.RIGHT;
       }
 
       this._increaseCurrentChildNumber();
+
+      this._checkIsNeedCloseGallery();
 
       this._setCurrentTranslate(this._sliderDirection);
 
@@ -96,14 +97,14 @@ export default class Slider {
   }
 
   _movePrev() {
-    this._checkIsNeedCloseGallery();
-
     if (this._isNeedMove) {
       if (this._sliderDirection === DIRECTION.RIGHT) {
         this._sliderDirection = DIRECTION.LEFT;
       }
 
       this._decreaseCurrentChildNumber();
+
+      this._checkIsNeedCloseGallery();
 
       this._setCurrentTranslate(this._sliderDirection);
 
@@ -132,7 +133,7 @@ export default class Slider {
   }
 
   _setTouchStartHandler() {
-    this._sliderList.addEventListener(`touchstart`, (evt) => {
+    this._wrapper.addEventListener(`touchstart`, (evt) => {
       touchStart(evt, this._sliderList, this._moveNext, this._movePrev);
     });
   }

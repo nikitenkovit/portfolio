@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'icons';
   src:
-    url('../../assets/fonts/icon-font/icons.woff?8ul5ti') format('woff'),
-    url('../../assets/fonts/icon-font/icons.ttf?8ul5ti') format('truetype');
+    url('../../assets/fonts/icon-font/icons.woff?f8xdtl') format('woff'),
+    url('../../assets/fonts/icon-font/icons.ttf?f8xdtl') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -23,20 +23,20 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-jest:before {
+  content: "\e905";
+}
+.icon-redux:before {
+  content: "\e908";
+}
 .icon-typescript:before {
   content: "\e906";
 }
 .icon-javascript:before {
   content: "\e90c";
 }
-.icon-bootstrap:before {
-  content: "\e905";
-}
 .icon-react:before {
   content: "\e907";
-}
-.icon-webpack:before {
-  content: "\e908";
 }
 .icon-check-square:before {
   content: "\e912";

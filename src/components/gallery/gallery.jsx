@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import PropTypes from "prop-types";
 import Slider from "./slider";
-import {debounce} from "./debounce";
 
 const Gallery = ({Component, items, onGalleryOpen, currentItemNumber}) => {
 
@@ -19,15 +18,13 @@ const Gallery = ({Component, items, onGalleryOpen, currentItemNumber}) => {
 
   useEffect(() => {
     window.addEventListener(`keydown`, handleEscapeKeyDown);
-
     const sliderRoot = document.querySelector(`.slider`);
-
     const slider = new Slider(sliderRoot, currentItemNumber, closeGallery);
 
     slider.init();
 
     const windowResizeHandler = () => {
-      debounce(() => slider.init());
+      slider.init();
     };
 
     window.addEventListener(`resize`, windowResizeHandler);
@@ -39,12 +36,12 @@ const Gallery = ({Component, items, onGalleryOpen, currentItemNumber}) => {
   }, []);
 
   return (
-    <section className="gallery" data-slider="chiefslider">
+    <section className="gallery">
       <h2 className="visually-hidden">Gallery</h2>
 
       <div className="gallery__slider slider">
         <div className="slider__controls">
-          <button className="slider__button slider__button--prev slider__control" type="button" data-slide="prev">
+          <button className="slider__button slider__button--prev" type="button" data-slide="prev">
             <span className="visually-hidden">Prev project</span>
           </button>
 
@@ -52,14 +49,14 @@ const Gallery = ({Component, items, onGalleryOpen, currentItemNumber}) => {
             <span className="visually-hidden">Close gallery</span>
           </button>
 
-          <button className="slider__button slider__button--next slider__control" type="button" data-slide="next">
+          <button className="slider__button slider__button--next" type="button" data-slide="next">
             <span className="visually-hidden">Next project</span>
           </button>
 
         </div>
 
         <div className="gallery__wrapper slider__wrapper">
-          <ul className="gallery__list slider__list slider__items">
+          <ul className="gallery__list slider__list">
             {items.map((item, index) => <Component key={index} item={item}/>)}
           </ul>
         </div>

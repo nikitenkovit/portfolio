@@ -19,7 +19,7 @@ module.exports = {
     devServer: {
         contentBase: Paths.DIST,
         open: false,
-        port: 1337,
+        port: 3000,
         compress: true,
         historyApiFallback: true
     },
@@ -50,7 +50,7 @@ module.exports = {
                     loader: "css-loader",
                     options: {
                       url: (url) => {
-                        if (url.includes('.jpg') || url.includes('.jpg') || url.includes('.svg')) {
+                        if (url.includes('.jpg') || url.includes('.png') || url.includes('.svg')) {
                           return false;
                         }
 

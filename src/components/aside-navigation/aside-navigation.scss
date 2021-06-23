@@ -9,6 +9,7 @@
     display: grid;
     width: 50px;
     height: 100%;
+    min-height: 460px;
     z-index: 5;
   }
 
@@ -77,6 +78,7 @@
       color: #ffffff;
       line-height: 50px;
       text-transform: uppercase;
+      white-space: nowrap;
       transition: .3s;
       z-index: -1;
     }

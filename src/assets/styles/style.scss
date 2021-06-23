@@ -242,7 +242,7 @@ $desktop-width: "1200px";
 main {
   transform: translateY(100px);
   opacity: 0;
-  transition: .6s;
+  transition: transform .6s, opacity .6s;
   transition-delay: .4s;
 }
 
@@ -265,6 +265,119 @@ body {
   }
 }
 
+.language-switcher {
+  position: fixed;
+  top: 30px;
+  right: 0;
+  display: grid;
+  place-items: end;
+  width: 50px;
+  height: 50px;
+  transition: .3s;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+
+  &:hover, &:focus {
+    width: 120px;
+    outline: none;
+  }
+
+  &__span {
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2b2a2a;
+    transition: .3s;
+    line-height: 100%;
+    z-index: 1;
+    user-select: none;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #2b2a2a;
+    transition: .3s;
+    line-height: 100%;
+    border: none;
+    opacity: 0;
+    font: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      background-color: $color-green;
+    }
+
+    &:focus {
+      right: 70px;
+      opacity: 1;
+    }
+  }
+
+  &:hover .language-switcher__button,
+  &:focus .language-switcher__button {
+    right: 70px;
+    opacity: 1;
+  }
+
+  &:hover .language-switcher__span,
+  &:focus .language-switcher__span {
+    background-color: $color-green;
+  }
+}
+
+.language-switcher--header {
+  position: relative;
+  top: 0;
+  left: 0;
+  place-items: start;
+  margin-top: 20px;
+
+  & .language-switcher__span {
+    border: 1px solid #ffffff;
+  }
+
+  & .language-switcher__button {
+    right: auto;
+    left: 0;
+    border: 1px solid #ffffff;
+
+    &:hover, &:focus {
+      border: 1px solid $color-green;
+      color: #ffffff;
+    }
+
+    &:focus {
+      right: auto;
+      left: 70px;
+      opacity: 1;
+    }
+  }
+
+  &:hover .language-switcher__button,
+  &:focus .language-switcher__button {
+    right: auto;
+    left: 70px;
+    opacity: 1;
+  }
+
+  &:hover .language-switcher__span,
+  &:focus .language-switcher__span {
+    border-color: $color-green;
+    color: #ffffff;
+  }
+}
+
 @import '../../components/home-screen/home-screen';
 @import '../../components/header/header';
 @import '../../components/aside-navigation/aside-navigation';
@@ -278,5 +391,8 @@ body {
 @import '../../components/gallery/slider';
 @import '../../components/gallery-project-item/gallery-project-item';
 @import '../../components/contacts-screen/contacts-screen';
+@import '../../components/contacts-section/contacts-section';
+@import '../../components/social-list/social-list';
 @import '../../components/form/form';
 @import '../../components/portfolio-screen/portfolio-screen';
+

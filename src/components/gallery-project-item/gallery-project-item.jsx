@@ -1,8 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from "prop-types";
+import {Context} from "../../context";
+import {Language} from "../../const";
 
 const GalleryProjectItem = ({item}) => {
-  const {type, name, languages, previewLink, githubLink, description, imgUrl} = item;
+  const [currentLanguage] = useContext(Context);
+
+  const needShowEnglish = currentLanguage === Language.En;
+
+  const {type, name, languages, previewLink, githubLink, descriptionEn, descriptionRu, imgUrl} = item;
 
   return (
     <li className="gallery__item slider__item project">
@@ -32,7 +38,9 @@ const GalleryProjectItem = ({item}) => {
 
         <img src={imgUrl} alt={name} className="project__image"/>
 
-        <p className="project__description">{description}</p>
+        <p className="project__description">
+          {needShowEnglish ? descriptionEn : descriptionRu}
+        </p>
       </div>
     </li>
   );

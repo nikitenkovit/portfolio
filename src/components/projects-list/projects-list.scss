@@ -25,10 +25,12 @@
 
     @media (min-width: $mobile-width) {
       grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
 
     @media (min-width: $big-tablet-width) {
       grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
     }
   }
 
@@ -40,10 +42,14 @@
     outline: none;
   }
 
+  &__group {
+    height: 100%;
+  }
+
   &__image {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -51,8 +57,10 @@
     position: absolute;
     top: auto;
     left: auto;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background-color: $color-green;
@@ -63,6 +71,14 @@
     text-transform: uppercase;
     transition: .3s ease;
     pointer-events: none;
+
+    &--languages {
+      font-size: 13px;
+
+      @media (min-width: $desktop-width) {
+        font-size: 15px;
+      }
+    }
   }
 }
 

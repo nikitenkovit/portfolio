@@ -11,7 +11,6 @@ const ProjectsList = ({projects, onGalleryOpen}) => {
       const hoverMove = new HoverMove(container, `.projects__description`);
       hoverMove.init();
     });
-
   });
 
   return (
@@ -21,7 +20,7 @@ const ProjectsList = ({projects, onGalleryOpen}) => {
       <ul className="projects__list">
         {
           projects.map((project, index) =>
-            <ProjectsItem key={project.name + index} project={project} onGalleryOpen={onGalleryOpen}/>)
+            <ProjectsItem key={project.name + index} project={project} index={index} onGalleryOpen={onGalleryOpen}/>)
         }
       </ul>
     </section>
@@ -33,4 +32,4 @@ ProjectsList.propTypes = {
   onGalleryOpen: PropTypes.func.isRequired
 };
 
-export default ProjectsList;
+export default React.memo(ProjectsList);
