@@ -46,18 +46,14 @@ export const Projects = [
     languages: `React, SASS, JavaScript`,
     previewLink: `#`,
     githubLink: `https://github.com/nikitenkovit/portfolio`,
-    descriptionEn: `I agree, a controversial decision, to add the portfolio site itself to the portfolio.
-    But for me this is a full-fledged project, the development of which took a lot of time and which
-    I would like to tell you about. The project uses a custom icon font. The slider, gallery and other things
-    were written without the use of third-party libraries. The effect of following the cursor, when hovering over
-    a work in the list of works, became for me the first real plugin, from which I got a lot of pleasure and which
-    I wanted to show off to others.`,
+    descriptionEn: `I agree, a controversial decision, to add the portfolio site itself to the portfolio. But for me it is complete
+      a project that took a lot of time to develop and which I would like to tell you about.
+      The project uses a custom icon font. Slider, Gallery, Cursor Follow Effect,
+       when hovering to work in the list of works and other things were written without the use of third-party libraries.`,
     descriptionRu: `Согласен, спорное решение, добавлять в портфолио сам сайт-портфолио. Но для меня это полноценный
      проект, на разработку которого ушло не мало времени и о котором бы мне хотелось рассказать.
-     В проекте используется кастомный иконочный шрифт. Слайдер, галерея и другие вещи, были написаны без
-     применения сторонних библиотек. Эффект следования за курсором, при наведении на работу в списке работ,
-     стал для меня первым настоящим плагином, от написания которого получил не мало удовольствия и которым
-     захотелось похвастаться перед другими.`,
+     В проекте используется кастомный иконочный шрифт. Слайдер, галерея, эффект следования за курсором,
+      при наведении на работу в списке работ и другие вещи, были написаны без применения сторонних библиотек.`,
   },
   {
     id: 5,

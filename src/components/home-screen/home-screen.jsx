@@ -59,12 +59,10 @@ const HomeScreen = () => {
             </h1>
             <p className="greeting__description">
               {needShowEnglish
-                ? `I'm a front-end developer specializing in creating clean, user-friendly and accessible interfaces.
-                 I consider work an ongoing education, and i\`m looking for opportunities to work with those who are
-                 willing to share their knowledge as much as i want to learn`
-                : `Я фронтенд разработчик, специализирующийся на создании чистых, удобных и доступных интерфейсов.
-                Считаю свою работу непрерывным образованием и я ищу возможности работать с теми, кто готов делиться
-                своими знаниями так же, как я хочу учиться.`}
+                ? `I am a front-end developer. I create clean, user-friendly and accessible interfaces.
+                I consider my work to be continuous education. I want to work with those who set themselves ambitious goals.`
+                : `Я фронтенд разработчик. Создаю чистые, удобные и доступные интерфейсы. Считаю свою работу
+                 непрерывным образованием. Хочу работать с теми, кто ставит перед собой амбициозные задачи..`}
             </p>
 
             <Link className="greeting__link link-to-about button icon-about" to={AppRoute.ABOUT}>

@@ -47,7 +47,7 @@ const AboutScreen = () => {
 
               <AboutList needShowEnglish={needShowEnglish}/>
 
-              <a download className="personal_infos__download-CV-Button button icon-download" href="#">
+              <a download className="personal_infos__download-CV-Button button icon-download" href="nikitenko.pdf">
                 <span className="button__span">
                   {needShowEnglish ? `Download CV` : `Резюме`}
                 </span>
