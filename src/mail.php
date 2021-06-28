@@ -21,7 +21,7 @@
 	}
 	if (isset($_POST['message'])) {
 	    $message 	= $_POST['message'];
-	    $text .= '<p><strong>subject</strong> ' . $message . '</p>';
+	    $text .= '<p><strong>message</strong> ' . $message . '</p>';
 	}
 
 	$subj = "Портфолио обратный звонок:";
