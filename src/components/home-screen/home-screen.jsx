@@ -62,7 +62,7 @@ const HomeScreen = () => {
                 ? `I am a front-end developer. I create clean, user-friendly and accessible interfaces.
                 I consider my work to be continuous education. I want to work with those who set themselves ambitious goals.`
                 : `Я фронтенд разработчик. Создаю чистые, удобные и доступные интерфейсы. Считаю свою работу
-                 непрерывным образованием. Хочу работать с теми, кто ставит перед собой амбициозные задачи..`}
+                 непрерывным образованием. Хочу работать с теми, кто ставит перед собой амбициозные задачи.`}
             </p>
 
             <Link className="greeting__link link-to-about button icon-about" to={AppRoute.ABOUT}>
